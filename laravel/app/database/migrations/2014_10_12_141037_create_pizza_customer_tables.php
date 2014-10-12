@@ -14,7 +14,7 @@ class CreatePizzaCustomerTables extends Migration {
 	{
         Schema::create('customers', function($table)
         {
-            $table->integer('id');
+            $table->increments('id');
             $table->string('name');
             $table->string('address');
             $table->string('city');
@@ -22,20 +22,17 @@ class CreatePizzaCustomerTables extends Migration {
             $table->string('postal_code');
             $table->string('phone');
             $table->timestamps();
-
-            $table->primary('id');
         });
 
         Schema::create('pizzas', function($table)
         {
-            $table->integer('id');
-            $table->integer('customer_id');
+            $table->increments('id');
+            $table->unsignedInteger('customer_id');
             $table->boolean('pepperoni');
             $table->boolean('olives');
             $table->boolean('sausage');
             $table->timestamps();
 
-            $table->primary('id');
             $table->index('customer_id');
             $table->foreign('customer_id')->references('id')->on('customers');
         });

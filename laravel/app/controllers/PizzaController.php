@@ -56,6 +56,7 @@ class PizzaController extends BaseController{
             'postal_code'=>Input::get('postal_code'),
             'phone'=>Input::get('phone')
         ));
+        $customer->save();
 
         //Write pizza info to DB
         $pizza = new Pizza(array(
@@ -64,6 +65,7 @@ class PizzaController extends BaseController{
             'olives'=>Input::get('olives')=='on'?1:0,
             'sausage'=>Input::get('sausage')=='on'?1:0
         ));
+        $pizza->save();
 
         return View::make('order-complete',array(
             'pizza'=>$pizza,
