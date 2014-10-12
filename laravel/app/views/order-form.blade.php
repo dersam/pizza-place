@@ -6,21 +6,21 @@
 <div class="row">
     <div class="input-control checkbox">
         <label>
-            <input type="checkbox" name="pepperoni"/>
+            <input type="checkbox" name="pepperoni" @if(Input::get('pepperoni')=='on') checked @endif/>
             <span class="check"></span>
             Pepperoni
         </label>
     </div>
     <div class="input-control checkbox">
             <label>
-                <input type="checkbox" name="olives"/>
+                <input type="checkbox" name="olives"  @if(Input::get('olives')=='on') checked @endif/>
                 <span class="check"></span>
                 Olives
             </label>
     </div>
     <div class="input-control checkbox">
             <label>
-                <input type="checkbox" name="sausage"/>
+                <input type="checkbox" name="sausage" @if(Input::get('sausage')=='on') checked @endif/>
                 <span class="check"></span>
                 Sausage
             </label>
@@ -30,19 +30,19 @@
 <blockquote>2. Enter your address!</blockquote>
 <div class="input-control text">
 Name
-    <input type="text" value="" id="name" name="name" placeholder="Name"/>
+    <input type="text" value="{{Input::get('name')}}" id="name" name="name" placeholder="Name"/>
 </div>
 <br/>
 <br/>
 <div class="input-control text">
 Address
-    <input type="text" value="" id="address" name="address" placeholder="Address"/>
+    <input type="text" value="{{Input::get('address')}}" id="address" name="address" placeholder="Address"/>
 </div>
 <br/>
 <br/>
 <div class="input-control text span5">
 City
-    <input type="text" value="" id="city" name="city" placeholder="City"/>
+    <input type="text" value="{{Input::get('city')}}" id="city" name="city" placeholder="City"/>
 </div>
 <br/>
 <br/>
@@ -67,13 +67,13 @@ Province
 <br/>
 <div class="input-control text span3">
 Postal Code
-    <input type="text" value="" id="postal_code" name="postal_code" placeholder="Postal Code"/>
+    <input type="text" value="{{Input::get('postal_code')}}" id="postal_code" name="postal_code" placeholder="Postal Code"/>
 </div>
 <br/>
 <br/>
 <div class="input-control text span3">
 Phone
-    <input type="text" value="" id="phone" name="phone" placeholder="Phone"/>
+    <input type="text" value="{{Input::get('phone')}}" id="phone" name="phone" placeholder="Phone"/>
 </div>
 <br/>
 <br/>

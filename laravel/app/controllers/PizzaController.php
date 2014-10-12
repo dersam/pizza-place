@@ -20,6 +20,32 @@ class PizzaController extends BaseController{
      * @return \Illuminate\View\View
      */
     function orderReceived(){
+        $validation = Validator::make(
+            array(
+                'name'=>Input::get('name'),
+                'address'=>Input::get('address'),
+                'city'=>Input::get('city'),
+                'province'=>Input::get('province'),
+                'postal_code'=>Input::get('postal_code'),
+                'phone'=>Input::get('phone'),
+                'pepperoni'=>Input::get('pepperoni'),
+                'olives'=>Input::get('olives'),
+                'sausage'=>Input::get('sausage')
+            ),
+            array(
+                'name'=>'required',
+                'address'=>'required',
+                'city'=>'required',
+                'province'=>'required',
+                'postal_code'=>'required',
+                'phone'=>'required',
+            )
+        );
+
+        if($validation->fails()){
+            Log::debug($validation->failed());
+            return View::make('order-form');
+        }
 
         //Write customer info to DB
         $customer = new Customer(array(
