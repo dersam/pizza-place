@@ -1,6 +1,8 @@
 pizza-place
 ===========
 
+Uses the Laravel framework.
+
 1. Install composer. (https://getcomposer.org/)
 2. cd laravel
 3. Install dependencies by running *composer install* in the /laravel directory.

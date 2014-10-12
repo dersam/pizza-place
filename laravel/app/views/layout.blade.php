@@ -9,12 +9,13 @@
     <link href="{{ URL::asset('css/iconFont.min.css')}}" rel="stylesheet">
 
 </head>
-<body>
-@yield('content')
-
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
+<body class="metro">
+<div class="wrapper">
+    <a href="/"><h1>Sal's Pizza</h1></a>
+    <hr/>
+    @yield('content')
+</div>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="{{ URL::asset('js/metro.min.js')}}"></script>
+<script src="{{ URL::asset('js/validate.js')}}"></script>
 </body>
 </html>

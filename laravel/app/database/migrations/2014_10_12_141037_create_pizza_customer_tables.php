@@ -20,6 +20,7 @@ class CreatePizzaCustomerTables extends Migration {
             $table->string('city');
             $table->string('province');
             $table->string('postal_code');
+            $table->string('phone');
             $table->timestamps();
 
             $table->primary('id');

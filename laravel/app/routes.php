@@ -11,7 +11,13 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/', array('as'=>'order-form',function()
 {
-	return View::make('hello');
-});
+	return View::make('order-form',array(
+        'title'=>"Sal's Pizza"
+    ));
+}));
+
+Route::post('/', array('as'=>'order-complete',function(){
+
+}));
