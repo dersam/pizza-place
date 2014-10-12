@@ -8,6 +8,7 @@
 class Pizza extends Eloquent{
     protected $table = 'pizzas';
     public $primaryKey = 'id';
+    protected $fillable = array('customer_id','pepperoni','olives','sausage');
 
     public function customers(){
         return $this->hasOne('Customer');

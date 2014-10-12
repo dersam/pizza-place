@@ -77,7 +77,7 @@ Phone
 </div>
 <br/>
 <br/>
-<input type="submit" onclick="validateForm(); return false;" value="Send me a pizza!"/>
+<input type="submit" onclick="return validateForm();" value="Send me a pizza!"/>
 
 
 {{Form::close()}}

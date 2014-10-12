@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{$title}}</title>
+    <title>Sal's Pizza</title>
     <link rel="stylesheet" href="{{ URL::asset('css/metro-bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/theme.css')}}">
     <link href="{{ URL::asset('css/iconFont.min.css')}}" rel="stylesheet">

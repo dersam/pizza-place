@@ -11,13 +11,8 @@
 |
 */
 
-Route::get('/', array('as'=>'order-form',function()
-{
-	return View::make('order-form',array(
-        'title'=>"Sal's Pizza"
-    ));
-}));
+//Displays the order form
+Route::get('/', array('as'=>'order-form','uses'=>'PizzaController@orderForm'));
 
-Route::post('/', array('as'=>'order-complete',function(){
-
-}));
+//Displays the completed order
+Route::post('/', array('as'=>'order-complete','uses'=>'PizzaController@orderReceived'));
