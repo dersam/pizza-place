@@ -1,3 +1,7 @@
+/**
+ * Confirm that all fields are filled out before form postback
+ * @returns {boolean} true if validation is successful, false if it fails
+ */
 function validateForm(){
     var required = [
         'name',
