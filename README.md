@@ -12,3 +12,9 @@ Uses the Laravel framework.
 5. Deploy the database: php artisan migrate
 	+ The database definition can be found in laravel/database/migrations/2014_10_12_141037_create_pizza_customer_tables.php
 6. Configure your webserver to point at laravel/public.
+
+
++ Main logic is in laravel/app/controller/PizzaController.php
++ Database tables are written using Eloquent ORM. Models are in laravel/app/models: Pizza.php and Customer.php
++ Forms are defined in laravel/app/views.
++ Routes are in laravel/app/routes.php

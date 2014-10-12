@@ -6,11 +6,22 @@
  */
 
 class PizzaController extends BaseController{
+
+    /**
+     * Display the pizza order form
+     * @return \Illuminate\View\View
+     */
     function orderForm(){
         return View::make('order-form');
     }
 
+    /**
+     * Display the received order.
+     * @return \Illuminate\View\View
+     */
     function orderReceived(){
+
+        //Write customer info to DB
         $customer = new Customer(array(
             'name'=>Input::get('name'),
             'address'=>Input::get('address'),
@@ -20,6 +31,7 @@ class PizzaController extends BaseController{
             'phone'=>Input::get('phone')
         ));
 
+        //Write pizza info to DB
         $pizza = new Pizza(array(
             'customer_id'=>$customer->id,
             'pepperoni'=>Input::get('pepperoni')=='on'?1:0,
